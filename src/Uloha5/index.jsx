@@ -4,7 +4,10 @@ import React from 'react'
 // Zadání 2: Po kliknutí na tlačítko vypiš do konzole „Uživatel chce koupit DOPLŇ_NÁZEV_POLOŽKY“.
 
 export const NakupniPolozka = ({ nazev }) => {
-	return <div>@TODO</div>
+	const informaceOPolozce = () => {
+		console.log(`Uzivatel chce koupit ${nazev}`);
+	}
+	return <div onClick={informaceOPolozce}>{nazev} koupit</div>
 }
 
 // Zadání 3: Pomocí `polozky.map` vypiš všechny názvy jako nákupní položky.
@@ -14,10 +17,12 @@ export const NakupniPolozka = ({ nazev }) => {
 export const Uloha5 = () => {
 	const polozky = ['hrušky', 'jablka', 'třešně', 'jahody']
 
+	polozky.map((polozka) => nazev={polozka}  )
+	
+
 	return (
 		<>
-			<NakupniPolozka nazev="hrušky" />
-			<NakupniPolozka nazev="jablka" />
+			<NakupniPolozka nazev={polozka} key={polozka} />
 		</>
 	)
 }
